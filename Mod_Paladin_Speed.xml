@@ -97,41 +97,48 @@
                         <andblock>
                             <string id="Comment">Bindings</string>
                             <normal>
-                                <condition id="isTargetInArea">
-                                    <string id="condition" values="yesno">yes</string>
-                                    <float id="xOffset">0.00</float>
-                                    <float id="yOffset">0.00</float>
-                                    <float id="width">0.40</float>
-                                    <float id="height">0.40</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="ignore invisibility" values="yesno">yes</string>
-                                    <normal>
-                                        <action id="pressButton">
-                                            <string id="button" values="buttons">FACE_TOP</string>
-                                            <float id="duration in seconds">0.00</float>
-                                        </action>
-                                    </normal>
+                                <condition id="isInNamedArea">
+                                    <string id="area name">healArea</string>
+                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                    <string id="who" values="targetself">self</string>
                                     <else>
-                                        <orblock>
+                                        <condition id="isTargetInArea">
+                                            <string id="condition" values="yesno">yes</string>
+                                            <float id="xOffset">0.00</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">0.40</float>
+                                            <float id="height">0.40</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="ignore invisibility" values="yesno">yes</string>
                                             <normal>
                                                 <action id="pressButton">
                                                     <string id="button" values="buttons">FACE_TOP</string>
                                                     <float id="duration in seconds">0.00</float>
                                                 </action>
                                             </normal>
-                                            <or>
-                                                <condition id="checkCounter">
-                                                    <string id="id">state</string>
-                                                    <string id="value">1</string>
-                                                    <string id="compare method" values="valuecompare">equal</string>
-                                                </condition>
-                                                <condition id="checkCounter">
-                                                    <string id="id">state</string>
-                                                    <string id="value">10</string>
-                                                    <string id="compare method" values="valuecompare">equal</string>
-                                                </condition>
-                                            </or>
-                                        </orblock>
+                                            <else>
+                                                <orblock>
+                                                    <normal>
+                                                        <action id="pressButton">
+                                                            <string id="button" values="buttons">FACE_TOP</string>
+                                                            <float id="duration in seconds">0.00</float>
+                                                        </action>
+                                                    </normal>
+                                                    <or>
+                                                        <condition id="checkCounter">
+                                                            <string id="id">state</string>
+                                                            <string id="value">1</string>
+                                                            <string id="compare method" values="valuecompare">equal</string>
+                                                        </condition>
+                                                        <condition id="checkCounter">
+                                                            <string id="id">state</string>
+                                                            <string id="value">10</string>
+                                                            <string id="compare method" values="valuecompare">equal</string>
+                                                        </condition>
+                                                    </or>
+                                                </orblock>
+                                            </else>
+                                        </condition>
                                     </else>
                                 </condition>
                             </normal>
