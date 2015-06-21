@@ -1224,7 +1224,7 @@
                                                                             <string id="value" values="flagtoggle">no</string>
                                                                         </action>
                                                                         <action id="executeBehaviourTree">
-                                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                                             <string id="Minimized">yes</string>
                                                                         </action>
                                                                     </normal>
@@ -1267,7 +1267,7 @@
                                                                                     <string id="value" values="flagtoggle">no</string>
                                                                                 </action>
                                                                                 <action id="executeBehaviourTree">
-                                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                                                     <string id="Minimized">yes</string>
                                                                                 </action>
                                                                             </normal>
@@ -1323,7 +1323,7 @@
                                                                                     <string id="value" values="flagtoggle">no</string>
                                                                                 </action>
                                                                                 <action id="executeBehaviourTree">
-                                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                                                     <string id="Minimized">yes</string>
                                                                                 </action>
                                                                             </normal>
@@ -1366,7 +1366,7 @@
                                                                                             <string id="value" values="flagtoggle">no</string>
                                                                                         </action>
                                                                                         <action id="executeBehaviourTree">
-                                                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                                                             <string id="Minimized">yes</string>
                                                                                         </action>
                                                                                     </normal>

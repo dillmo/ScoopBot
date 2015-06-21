@@ -557,7 +557,7 @@
                     <string id="Minimized">yes</string>
                 </action>
                 <action id="executeBehaviourTree">
-                    <string id="fileName">Mod_VeankoCheckToSwitchLane_Ignotis</string>
+                    <string id="fileName">Mod_VeankoCheckToSwitchLane</string>
                     <string id="Minimized">yes</string>
                 </action>
                 <condition id="checkCharacterValue">
@@ -4383,7 +4383,7 @@
                                             <string id="value" values="flagtoggle">yes</string>
                                         </action>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_FindAndTargetEnemiesLongRange_Ignotis</string>
+                                            <string id="fileName">FN_FindAndTargetEnemiesLongRange</string>
                                             <string id="Minimized">yes</string>
                                         </action>
                                     </normal>
@@ -4707,7 +4707,7 @@
                                     </normal>
                                 </condition>
                                 <action id="executeBehaviourTree">
-                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                     <string id="Minimized">yes</string>
                                 </action>
                                 <condition id="getBoolEquals">
@@ -5189,7 +5189,7 @@
                                             <string id="execute first time" values="yesno">no</string>
                                             <normal>
                                                 <action id="executeBehaviourTree">
-                                                    <string id="fileName">Mod_FindAndTargetEnemiesLongRange_Ignotis</string>
+                                                    <string id="fileName">FN_FindAndTargetEnemiesLongRange</string>
                                                     <string id="Minimized">yes</string>
                                                 </action>
                                             </normal>
@@ -6095,7 +6095,7 @@
                                                     <string id="value" values="yesno">no</string>
                                                     <normal>
                                                         <action id="executeBehaviourTree">
-                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                             <string id="Minimized">yes</string>
                                                         </action>
                                                     </normal>
@@ -6458,7 +6458,7 @@
                                                             <string id="Comment">Other Enemies are closer</string>
                                                             <normal>
                                                                 <action id="executeBehaviourTree">
-                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                                     <string id="Comment">Find closer Enemy</string>
                                                                     <string id="Minimized">yes</string>
                                                                 </action>
@@ -7327,7 +7327,7 @@
                                     <string id="execute first time" values="yesno">no</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Comment">Find closer Enemy</string>
                                             <string id="Minimized">yes</string>
                                         </action>
@@ -8109,7 +8109,7 @@
                                             <string id="bool"></string>
                                         </action>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Minimized">yes</string>
                                         </action>
                                     </normal>
@@ -8260,7 +8260,7 @@
                                     <string id="Comment">Lookout for Enemy creeps</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Minimized">yes</string>
                                         </action>
                                     </normal>
@@ -8294,7 +8294,7 @@
                                             <string id="Comment">check for creeps</string>
                                             <normal>
                                                 <action id="executeBehaviourTree">
-                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                    <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                     <string id="Minimized">yes</string>
                                                 </action>
                                             </normal>
@@ -8314,7 +8314,7 @@
                                                     <string id="Comment">Lookout for Enemy players</string>
                                                     <normal>
                                                         <action id="executeBehaviourTree">
-                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                                             <string id="Minimized">yes</string>
                                                         </action>
                                                     </normal>
@@ -8337,7 +8337,7 @@
                                     <string id="execute first time" values="yesno">no</string>
                                     <normal>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Comment">Find closer Enemy</string>
                                             <string id="Minimized">yes</string>
                                         </action>
@@ -9511,7 +9511,7 @@
                                     </normal>
                                     <else>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Minimized">yes</string>
                                         </action>
                                         <condition id="hasTarget">
@@ -9576,7 +9576,7 @@
                                     </normal>
                                     <else>
                                         <action id="executeBehaviourTree">
-                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange_Ignotis</string>
+                                            <string id="fileName">Mod_VeankoFindAndTargetEnemiesShortRange</string>
                                             <string id="Minimized">yes</string>
                                         </action>
                                         <condition id="hasTarget">

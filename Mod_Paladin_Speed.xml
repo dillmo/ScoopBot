@@ -8,7 +8,7 @@
                     <string id="Minimized">yes</string>
                 </action>
                 <action id="executeBehaviourTree">
-                    <string id="fileName">Mod_VeankoAI_Ignotis</string>
+                    <string id="fileName">Mod_VeankoAI</string>
                     <string id="Minimized">yes</string>
                 </action>
                 <condition id="once">
