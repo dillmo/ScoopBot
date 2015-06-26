@@ -11,190 +11,217 @@
                     <string id="fileName">Mod_VeankoAI</string>
                     <string id="Minimized">yes</string>
                 </action>
-                <condition id="once">
-                    <string id="Comment">Drop pod Solar</string>
-                    <normal>
-                        <action id="adjustCharacterValue">
-                            <string id="property" values="charactervaluesAdjustable">gold</string>
-                            <float id="value">40.00</float>
-                            <string id="adjust method" values="valueadjust">add</string>
-                        </action>
-                    </normal>
-                </condition>
                 <orblock>
                     <string id="Comment">Combat skills</string>
                     <normal>
                         <andblock>
-                            <string id="Comment">Hammer</string>
-                            <normal>
-                                <condition id="isUpgradeEnabled">
-                                    <string id="condition" values="yesno">yes</string>
-                                    <string id="upgrade name">PaladinHammerRange1</string>
+                            <string id="Comment">Do NOT attack Sentry while he charges</string>
+                            <else>
+                                <andblock>
+                                    <string id="Comment">Hammer</string>
                                     <normal>
-                                        <condition id="isTargetInArea">
-                                            <string id="condition" values="yesno">yes</string>
-                                            <float id="xOffset">0.00</float>
-                                            <float id="yOffset">0.00</float>
-                                            <float id="width">2.00</float>
-                                            <float id="height">1.00</float>
-                                            <string id="check line of sight" values="yesno">no</string>
-                                            <string id="ignore invisibility" values="yesno">yes</string>
-                                            <normal>
-                                                <action id="aimStickAtTarget">
-                                                    <float id="duration seconds">0.10</float>
-                                                    <string id="only aim when needed" values="yesno">yes</string>
-                                                    <string id="use rotation speed limits" values="yesno">no</string>
-                                                    <float id="min rotation speed per second in degrees">0.00</float>
-                                                    <float id="max rotation speed per second in degrees">0.00</float>
-                                                    <float id="use min rotation speed when angle to target under">0.00</float>
-                                                    <float id="use max rotation speed when angle to target over">0.00</float>
-                                                </action>
-                                                <action id="pressButton">
-                                                    <string id="button" values="buttons">FACE_RIGHT</string>
-                                                    <float id="duration in seconds">0.10</float>
-                                                </action>
-                                            </normal>
-                                        </condition>
-                                    </normal>
-                                    <else>
-                                        <condition id="isTargetInArea">
-                                            <string id="condition" values="yesno">yes</string>
-                                            <float id="xOffset">0.00</float>
-                                            <float id="yOffset">0.00</float>
-                                            <float id="width">1.60</float>
-                                            <float id="height">1.00</float>
-                                            <string id="check line of sight" values="yesno">no</string>
-                                            <string id="ignore invisibility" values="yesno">yes</string>
-                                            <normal>
-                                                <action id="aimStickAtTarget">
-                                                    <float id="duration seconds">0.10</float>
-                                                    <string id="only aim when needed" values="yesno">yes</string>
-                                                    <string id="use rotation speed limits" values="yesno">no</string>
-                                                    <float id="min rotation speed per second in degrees">0.00</float>
-                                                    <float id="max rotation speed per second in degrees">0.00</float>
-                                                    <float id="use min rotation speed when angle to target under">0.00</float>
-                                                    <float id="use max rotation speed when angle to target over">0.00</float>
-                                                </action>
-                                                <action id="pressButton">
-                                                    <string id="button" values="buttons">FACE_RIGHT</string>
-                                                    <float id="duration in seconds">0.10</float>
-                                                </action>
-                                            </normal>
-                                        </condition>
-                                    </else>
-                                </condition>
-                            </normal>
-                            <or>
-                                <condition id="isSkillOnButtonAvailable">
-                                    <string id="button" values="buttons">FACE_RIGHT</string>
-                                </condition>
-                                <condition id="getBoolEquals">
-                                    <string id="id">CanUseSkills</string>
-                                    <string id="value" values="yesno">yes</string>
-                                </condition>
-                            </or>
-                        </andblock>
-                        <andblock>
-                            <string id="Comment">Bindings</string>
-                            <normal>
-                                <condition id="isInNamedArea">
-                                    <string id="area name">healArea</string>
-                                    <string id="team" values="ownenemy">OWN_TEAM</string>
-                                    <string id="who" values="targetself">self</string>
-                                    <else>
-                                        <condition id="isTargetInArea">
-                                            <string id="condition" values="yesno">yes</string>
-                                            <float id="xOffset">0.00</float>
-                                            <float id="yOffset">0.00</float>
-                                            <float id="width">0.40</float>
-                                            <float id="height">0.40</float>
-                                            <string id="check line of sight" values="yesno">no</string>
-                                            <string id="ignore invisibility" values="yesno">yes</string>
-                                            <normal>
-                                                <action id="pressButton">
-                                                    <string id="button" values="buttons">FACE_TOP</string>
-                                                    <float id="duration in seconds">0.00</float>
-                                                </action>
-                                            </normal>
+                                        <andblock>
+                                            <string id="Comment">Don&apos;t hammer Froggy if he has RBAY</string>
                                             <else>
-                                                <orblock>
+                                                <condition id="isUpgradeEnabled">
+                                                    <string id="condition" values="yesno">yes</string>
+                                                    <string id="upgrade name">PaladinHammerRange1</string>
+                                                    <normal>
+                                                        <condition id="isTargetInArea">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <float id="xOffset">0.00</float>
+                                                            <float id="yOffset">0.00</float>
+                                                            <float id="width">2.00</float>
+                                                            <float id="height">1.00</float>
+                                                            <string id="check line of sight" values="yesno">no</string>
+                                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                                            <normal>
+                                                                <action id="aimStickAtTarget">
+                                                                    <float id="duration seconds">0.10</float>
+                                                                    <string id="only aim when needed" values="yesno">yes</string>
+                                                                    <string id="use rotation speed limits" values="yesno">no</string>
+                                                                    <float id="min rotation speed per second in degrees">0.00</float>
+                                                                    <float id="max rotation speed per second in degrees">0.00</float>
+                                                                    <float id="use min rotation speed when angle to target under">0.00</float>
+                                                                    <float id="use max rotation speed when angle to target over">0.00</float>
+                                                                </action>
+                                                                <action id="pressButton">
+                                                                    <string id="button" values="buttons">FACE_RIGHT</string>
+                                                                    <float id="duration in seconds">0.10</float>
+                                                                </action>
+                                                            </normal>
+                                                        </condition>
+                                                    </normal>
+                                                    <else>
+                                                        <condition id="isTargetInArea">
+                                                            <string id="condition" values="yesno">yes</string>
+                                                            <float id="xOffset">0.00</float>
+                                                            <float id="yOffset">0.00</float>
+                                                            <float id="width">1.60</float>
+                                                            <float id="height">1.00</float>
+                                                            <string id="check line of sight" values="yesno">no</string>
+                                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                                            <normal>
+                                                                <action id="aimStickAtTarget">
+                                                                    <float id="duration seconds">0.10</float>
+                                                                    <string id="only aim when needed" values="yesno">yes</string>
+                                                                    <string id="use rotation speed limits" values="yesno">no</string>
+                                                                    <float id="min rotation speed per second in degrees">0.00</float>
+                                                                    <float id="max rotation speed per second in degrees">0.00</float>
+                                                                    <float id="use min rotation speed when angle to target under">0.00</float>
+                                                                    <float id="use max rotation speed when angle to target over">0.00</float>
+                                                                </action>
+                                                                <action id="pressButton">
+                                                                    <string id="button" values="buttons">FACE_RIGHT</string>
+                                                                    <float id="duration in seconds">0.10</float>
+                                                                </action>
+                                                            </normal>
+                                                        </condition>
+                                                    </else>
+                                                </condition>
+                                            </else>
+                                            <or>
+                                                <condition id="checkClass">
+                                                    <string id="check on" values="targetself">target</string>
+                                                    <string id="class">Dasher</string>
+                                                </condition>
+                                                <condition id="hasUpgrade">
+                                                    <string id="class">Dasher</string>
+                                                    <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
+                                                    <string id="upgrade name">DasherWhirlwindReflect</string>
+                                                </condition>
+                                                <condition id="hasUpgrade">
+                                                    <string id="class">Dasher</string>
+                                                    <string id="team" values="teamswithnumbers">ENEMY_TEAM</string>
+                                                    <string id="upgrade name">whirlPenalty</string>
+                                                    <string id="Minimized">yes</string>
+                                                </condition>
+                                            </or>
+                                        </andblock>
+                                    </normal>
+                                    <or>
+                                        <condition id="isSkillOnButtonAvailable">
+                                            <string id="button" values="buttons">FACE_RIGHT</string>
+                                        </condition>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">CanUseSkills</string>
+                                            <string id="value" values="yesno">yes</string>
+                                        </condition>
+                                    </or>
+                                </andblock>
+                                <andblock>
+                                    <string id="Comment">Bindings</string>
+                                    <normal>
+                                        <condition id="isInNamedArea">
+                                            <string id="area name">healArea</string>
+                                            <string id="team" values="ownenemy">OWN_TEAM</string>
+                                            <string id="who" values="targetself">self</string>
+                                            <else>
+                                                <condition id="isTargetInArea">
+                                                    <string id="condition" values="yesno">yes</string>
+                                                    <float id="xOffset">0.00</float>
+                                                    <float id="yOffset">0.00</float>
+                                                    <float id="width">0.40</float>
+                                                    <float id="height">0.40</float>
+                                                    <string id="check line of sight" values="yesno">no</string>
+                                                    <string id="ignore invisibility" values="yesno">yes</string>
                                                     <normal>
                                                         <action id="pressButton">
                                                             <string id="button" values="buttons">FACE_TOP</string>
                                                             <float id="duration in seconds">0.00</float>
                                                         </action>
                                                     </normal>
-                                                    <or>
-                                                        <condition id="checkCounter">
-                                                            <string id="id">state</string>
-                                                            <string id="value">1</string>
-                                                            <string id="compare method" values="valuecompare">equal</string>
-                                                        </condition>
-                                                        <condition id="checkCounter">
-                                                            <string id="id">state</string>
-                                                            <string id="value">10</string>
-                                                            <string id="compare method" values="valuecompare">equal</string>
-                                                        </condition>
-                                                    </or>
-                                                </orblock>
+                                                    <else>
+                                                        <orblock>
+                                                            <normal>
+                                                                <action id="pressButton">
+                                                                    <string id="button" values="buttons">FACE_TOP</string>
+                                                                    <float id="duration in seconds">0.00</float>
+                                                                </action>
+                                                            </normal>
+                                                            <or>
+                                                                <condition id="checkCounter">
+                                                                    <string id="id">state</string>
+                                                                    <string id="value">1</string>
+                                                                    <string id="compare method" values="valuecompare">equal</string>
+                                                                </condition>
+                                                                <condition id="checkCounter">
+                                                                    <string id="id">state</string>
+                                                                    <string id="value">10</string>
+                                                                    <string id="compare method" values="valuecompare">equal</string>
+                                                                </condition>
+                                                            </or>
+                                                        </orblock>
+                                                    </else>
+                                                </condition>
                                             </else>
                                         </condition>
-                                    </else>
-                                </condition>
-                            </normal>
-                            <or>
-                                <condition id="isSkillOnButtonAvailable">
-                                    <string id="button" values="buttons">FACE_TOP</string>
-                                </condition>
-                                <condition id="getBoolEquals">
-                                    <string id="id">CanUseSkills</string>
-                                    <string id="value" values="yesno">yes</string>
-                                </condition>
-                            </or>
-                        </andblock>
-                        <condition id="isSkillOnButtonAvailable">
-                            <string id="button" values="buttons">FACE_LEFT</string>
-                            <string id="Comment">Slash</string>
-                            <normal>
-                                <condition id="isInArea">
-                                    <string id="condition" values="yesno">yes</string>
-                                    <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;DESTROYABLE_OBSTACLES;;</string>
-                                    <string id="check green obstacles only" values="yesno">no</string>
-                                    <string id="count characters out of combat" values="yesno">yes</string>
-                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
-                                    <string id="areaName"></string>
-                                    <float id="xOffset">0.17</float>
-                                    <float id="yOffset">0.00</float>
-                                    <float id="width">0.34</float>
-                                    <float id="height">0.34</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="ignore invisibility" values="yesno">no</string>
-                                    <normal>
-                                        <action id="pressButton">
-                                            <string id="button" values="buttons">FACE_LEFT</string>
-                                            <float id="duration in seconds">0.00</float>
-                                        </action>
                                     </normal>
-                                    <else>
-                                        <condition id="isTargetInArea">
+                                    <or>
+                                        <condition id="isSkillOnButtonAvailable">
+                                            <string id="button" values="buttons">FACE_TOP</string>
+                                        </condition>
+                                        <condition id="getBoolEquals">
+                                            <string id="id">CanUseSkills</string>
+                                            <string id="value" values="yesno">yes</string>
+                                        </condition>
+                                    </or>
+                                </andblock>
+                                <condition id="isSkillOnButtonAvailable">
+                                    <string id="button" values="buttons">FACE_LEFT</string>
+                                    <string id="Comment">Slash</string>
+                                    <normal>
+                                        <condition id="isInArea">
                                             <string id="condition" values="yesno">yes</string>
+                                            <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;DESTROYABLE_OBSTACLES;;</string>
+                                            <string id="check green obstacles only" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
+                                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
+                                            <string id="areaName"></string>
                                             <float id="xOffset">0.17</float>
                                             <float id="yOffset">0.00</float>
                                             <float id="width">0.34</float>
                                             <float id="height">0.34</float>
                                             <string id="check line of sight" values="yesno">no</string>
-                                            <string id="ignore invisibility" values="yesno">yes</string>
+                                            <string id="ignore invisibility" values="yesno">no</string>
                                             <normal>
                                                 <action id="pressButton">
                                                     <string id="button" values="buttons">FACE_LEFT</string>
                                                     <float id="duration in seconds">0.00</float>
                                                 </action>
                                             </normal>
+                                            <else>
+                                                <condition id="isTargetInArea">
+                                                    <string id="condition" values="yesno">yes</string>
+                                                    <float id="xOffset">0.17</float>
+                                                    <float id="yOffset">0.00</float>
+                                                    <float id="width">0.34</float>
+                                                    <float id="height">0.34</float>
+                                                    <string id="check line of sight" values="yesno">no</string>
+                                                    <string id="ignore invisibility" values="yesno">yes</string>
+                                                    <normal>
+                                                        <action id="pressButton">
+                                                            <string id="button" values="buttons">FACE_LEFT</string>
+                                                            <float id="duration in seconds">0.00</float>
+                                                        </action>
+                                                    </normal>
+                                                </condition>
+                                            </else>
                                         </condition>
-                                    </else>
+                                    </normal>
                                 </condition>
-                            </normal>
-                        </condition>
+                            </else>
+                            <or>
+                                <condition id="getBoolEquals">
+                                    <string id="id">RetreatingFromNauts</string>
+                                    <string id="value" values="yesno">yes</string>
+                                </condition>
+                                <condition id="checkClass">
+                                    <string id="check on" values="targetself">target</string>
+                                    <string id="class">Spy</string>
+                                </condition>
+                            </or>
+                        </andblock>
                     </normal>
                     <else>
                         <condition id="checkCounter">
@@ -287,6 +314,340 @@
                         </action>
                     </normal>
                 </condition>
+                <orblock>
+                    <normal>
+                        <action id="setBool">
+                            <string id="id">DangerousNaut</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                    </normal>
+                    <else>
+                        <action id="setBool">
+                            <string id="id">DangerousNaut</string>
+                            <string id="value" values="flagtoggle">no</string>
+                        </action>
+                    </else>
+                    <or>
+                        <condition id="getBoolEquals">
+                            <string id="id">FrontDangerPresent</string>
+                            <string id="value" values="yesno">yes</string>
+                        </condition>
+                        <condition id="getBoolEquals">
+                            <string id="id">BackDangerPresent</string>
+                            <string id="value" values="yesno">yes</string>
+                        </condition>
+                    </or>
+                </orblock>
+                <andblock>
+                    <string id="Comment">Why won&apos;t you push? ;_; (Credit: Trinary)</string>
+                    <normal>
+                        <orblock>
+                            <string id="Comment">Not retreating?</string>
+                            <else>
+                                <orblock>
+                                    <string id="Comment">creeps in front</string>
+                                    <normal>
+                                        <condition id="checkCounter">
+                                            <string id="id">state</string>
+                                            <string id="value">8</string>
+                                            <string id="compare method" values="valuecompare">equal</string>
+                                            <string id="Comment">Push if not already pushing</string>
+                                            <else>
+                                                <action id="adjustCounter">
+                                                    <string id="id">setState</string>
+                                                    <string id="value">8</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">pushTower (8)</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </else>
+                                        </condition>
+                                        <action id="selectTarget">
+                                            <string id="groups to select" values="target groups" multiselect="true">DESTROYABLE_OBSTACLES;;</string>
+                                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                                            <string id="class"></string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="remove if not found" values="yesno">no</string>
+                                            <float id="xOffset">0.00</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">1.00</float>
+                                            <float id="height">0.50</float>
+                                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                                            <float id="health value">0.00</float>
+                                            <string id="distance check" values="distance check">NONE</string>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="ignore invisibility" values="yesno">no</string>
+                                            <string id="Minimized">yes</string>
+                                        </action>
+                                    </normal>
+                                    <or>
+                                        <condition id="isCharacterInArea">
+                                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                            <string id="class">CreepDroidMelee</string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
+                                            <string id="condition" values="charactervaluesCheckable">health</string>
+                                            <string id="comparison" values="valuecompare">greater or equal</string>
+                                            <float id="value">0.00</float>
+                                            <string id="character minimum"></string>
+                                            <float id="xOffset">0.70</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">1.40</float>
+                                            <float id="height">1.00</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="Minimized">yes</string>
+                                        </condition>
+                                        <condition id="isCharacterInArea">
+                                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                            <string id="class">CreepDroidFlying</string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
+                                            <string id="condition" values="charactervaluesCheckable">health</string>
+                                            <string id="comparison" values="valuecompare">greater or equal</string>
+                                            <float id="value">0.00</float>
+                                            <string id="character minimum"></string>
+                                            <float id="xOffset">0.70</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">1.40</float>
+                                            <float id="height">1.00</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="Minimized">yes</string>
+                                        </condition>
+                                        <condition id="isCharacterInArea">
+                                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                            <string id="class">CreepDroidSuper</string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
+                                            <string id="condition" values="charactervaluesCheckable">health</string>
+                                            <string id="comparison" values="valuecompare">greater or equal</string>
+                                            <float id="value">0.00</float>
+                                            <string id="character minimum"></string>
+                                            <float id="xOffset">0.70</float>
+                                            <float id="yOffset">0.00</float>
+                                            <float id="width">1.40</float>
+                                            <float id="height">1.00</float>
+                                            <string id="check line of sight" values="yesno">no</string>
+                                            <string id="Minimized">yes</string>
+                                        </condition>
+                                    </or>
+                                </orblock>
+                            </else>
+                            <or>
+                                <condition id="checkCounter">
+                                    <string id="id">state</string>
+                                    <string id="value">1</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Minimized">yes</string>
+                                </condition>
+                                <condition id="checkCounter">
+                                    <string id="id">state</string>
+                                    <string id="value">10</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Minimized">yes</string>
+                                </condition>
+                                <condition id="checkCounter">
+                                    <string id="id">state</string>
+                                    <string id="value">11</string>
+                                    <string id="compare method" values="valuecompare">equal</string>
+                                    <string id="Minimized">yes</string>
+                                </condition>
+                            </or>
+                        </orblock>
+                    </normal>
+                    <else>
+                        <condition id="checkCounter">
+                            <string id="id">state</string>
+                            <string id="value">6</string>
+                            <string id="compare method" values="valuecompare">equal</string>
+                            <normal>
+                                <condition id="directionToEnemyBase">
+                                    <string id="direction" values="forwardbackward">BACKWARD</string>
+                                    <string id="Comment">Facing the wrong way</string>
+                                    <normal>
+                                        <andblock>
+                                            <string id="Comment">Why won&apos;t you push? ;_;</string>
+                                            <normal>
+                                                <action id="adjustCounter">
+                                                    <string id="id">setState</string>
+                                                    <string id="value">8</string>
+                                                    <string id="adjust method" values="valueadjust">set</string>
+                                                    <string id="Comment">pushTower (8)</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                                <action id="selectTarget">
+                                                    <string id="groups to select" values="target groups" multiselect="true">DESTROYABLE_OBSTACLES;;</string>
+                                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                                                    <string id="class"></string>
+                                                    <string id="only check parent" values="yesno">no</string>
+                                                    <string id="remove if not found" values="yesno">no</string>
+                                                    <float id="xOffset">0.00</float>
+                                                    <float id="yOffset">0.00</float>
+                                                    <float id="width">1.00</float>
+                                                    <float id="height">0.50</float>
+                                                    <string id="compare method" values="valuecompare2">greater or equal</string>
+                                                    <float id="health value">0.00</float>
+                                                    <string id="distance check" values="distance check">NONE</string>
+                                                    <string id="check line of sight" values="yesno">no</string>
+                                                    <string id="ignore invisibility" values="yesno">no</string>
+                                                    <string id="Minimized">yes</string>
+                                                </action>
+                                            </normal>
+                                            <or>
+                                                <condition id="getBoolEquals">
+                                                    <string id="id">DangerousNaut</string>
+                                                    <string id="value" values="yesno">no</string>
+                                                </condition>
+                                                <condition id="isInArea">
+                                                    <string id="condition" values="yesno">yes</string>
+                                                    <string id="collision groups" values="collison groups" multiselect="true">CREEPS;;</string>
+                                                    <string id="check green obstacles only" values="yesno">no</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
+                                                    <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                                                    <string id="areaName"></string>
+                                                    <float id="xOffset">-0.40</float>
+                                                    <float id="yOffset">0.00</float>
+                                                    <float id="width">0.80</float>
+                                                    <float id="height">1.00</float>
+                                                    <string id="check line of sight" values="yesno">yes</string>
+                                                    <string id="ignore invisibility" values="yesno">no</string>
+                                                    <string id="Comment">check for creeps</string>
+                                                </condition>
+                                                <condition id="isTurretInArea">
+                                                    <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                                                    <string id="health comparison" values="valuecompare">greater or equal</string>
+                                                    <float id="health">0.00</float>
+                                                    <float id="xOffset">0.00</float>
+                                                    <float id="yOffset">0.00</float>
+                                                    <float id="width">0.80</float>
+                                                    <float id="height">0.30</float>
+                                                    <string id="check line of sight" values="yesno">no</string>
+                                                </condition>
+                                                <condition id="checkCharacterValue">
+                                                    <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                                                    <float id="value">75.00</float>
+                                                    <string id="compare method" values="valuecompare">greater or equal</string>
+                                                    <string id="check on" values="targetself">self</string>
+                                                </condition>
+                                            </or>
+                                        </andblock>
+                                    </normal>
+                                </condition>
+                            </normal>
+                        </condition>
+                    </else>
+                    <or>
+                        <condition id="getBoolEquals">
+                            <string id="id">DangerousNaut</string>
+                            <string id="value" values="yesno">no</string>
+                        </condition>
+                        <condition id="isInArea">
+                            <string id="condition" values="yesno">yes</string>
+                            <string id="collision groups" values="collison groups" multiselect="true">CREEPS;;</string>
+                            <string id="check green obstacles only" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="areaName"></string>
+                            <float id="xOffset">0.30</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">0.60</float>
+                            <float id="height">1.00</float>
+                            <string id="check line of sight" values="yesno">yes</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                            <string id="Comment">check for creeps</string>
+                        </condition>
+                        <condition id="isTurretInArea">
+                            <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
+                            <string id="health comparison" values="valuecompare">greater or equal</string>
+                            <float id="health">0.00</float>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">0.80</float>
+                            <float id="height">0.30</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">75.00</float>
+                            <string id="compare method" values="valuecompare">greater or equal</string>
+                            <string id="check on" values="targetself">self</string>
+                        </condition>
+                    </or>
+                </andblock>
+                <andblock>
+                    <string id="Comment">Heal from healbots</string>
+                    <normal>
+                        <action id="selectTarget">
+                            <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="class">CreepSummonerHealtotem</string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="remove if not found" values="yesno">no</string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.00</float>
+                            <float id="height">1.00</float>
+                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                            <float id="health value">0.00</float>
+                            <string id="distance check" values="distance check">NONE</string>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                        </action>
+                        <action id="aimStickAtTarget">
+                            <float id="duration seconds">0.10</float>
+                            <string id="only aim when needed" values="yesno">no</string>
+                            <string id="use rotation speed limits" values="yesno">no</string>
+                            <float id="min rotation speed per second in degrees">0.00</float>
+                            <float id="max rotation speed per second in degrees">0.00</float>
+                            <float id="use min rotation speed when angle to target under">0.00</float>
+                            <float id="use max rotation speed when angle to target over">0.00</float>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">MoveTowardsTarget</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">MoveAwayFromTarget</string>
+                            <string id="value" values="flagtoggle">no</string>
+                        </action>
+                    </normal>
+                    <or>
+                        <condition id="isCharacterInArea">
+                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="class">CreepSummonerHealtotem</string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="only check children" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
+                            <string id="condition" values="charactervaluesCheckable">health</string>
+                            <string id="comparison" values="valuecompare">greater or equal</string>
+                            <float id="value">0.00</float>
+                            <string id="character minimum"></string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.00</float>
+                            <float id="height">1.00</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">50.00</float>
+                            <string id="compare method" values="valuecompare">greater</string>
+                            <string id="check on" values="targetself">target</string>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">100.00</float>
+                            <string id="compare method" values="valuecompare">less</string>
+                            <string id="check on" values="targetself">self</string>
+                        </condition>
+                    </or>
+                </andblock>
                 <action id="executeBehaviourTree">
                     <string id="fileName">Mod_IgnotisImprovements</string>
                     <string id="Comment">Execute this behavior tree just above MoveAwayFromTarget. Be sure to set dontTargetCreeps to yes if your bot is trying to get a kill. It resets each tick.</string>
@@ -531,28 +892,6 @@
                                                     <string id="value" values="flagtoggle">yes</string>
                                                 </action>
                                             </normal>
-                                            <else>
-                                                <condition id="isInArea">
-                                                    <string id="condition" values="yesno">no</string>
-                                                    <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;</string>
-                                                    <string id="check green obstacles only" values="yesno">no</string>
-                                                    <string id="count characters out of combat" values="yesno">yes</string>
-                                                    <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
-                                                    <string id="areaName"></string>
-                                                    <float id="xOffset">0.25</float>
-                                                    <float id="yOffset">0.50</float>
-                                                    <float id="width">0.05</float>
-                                                    <float id="height">0.10</float>
-                                                    <string id="check line of sight" values="yesno">no</string>
-                                                    <string id="ignore invisibility" values="yesno">no</string>
-                                                    <normal>
-                                                        <action id="setBool">
-                                                            <string id="id">float</string>
-                                                            <string id="value" values="flagtoggle">yes</string>
-                                                        </action>
-                                                    </normal>
-                                                </condition>
-                                            </else>
                                         </condition>
                                     </normal>
                                 </condition>
@@ -567,28 +906,6 @@
                                             <string id="value" values="flagtoggle">yes</string>
                                         </action>
                                     </normal>
-                                    <else>
-                                        <condition id="isInArea">
-                                            <string id="condition" values="yesno">no</string>
-                                            <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;</string>
-                                            <string id="check green obstacles only" values="yesno">no</string>
-                                            <string id="count characters out of combat" values="yesno">yes</string>
-                                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
-                                            <string id="areaName"></string>
-                                            <float id="xOffset">0.25</float>
-                                            <float id="yOffset">0.50</float>
-                                            <float id="width">0.05</float>
-                                            <float id="height">0.10</float>
-                                            <string id="check line of sight" values="yesno">no</string>
-                                            <string id="ignore invisibility" values="yesno">no</string>
-                                            <normal>
-                                                <action id="setBool">
-                                                    <string id="id">float</string>
-                                                    <string id="value" values="flagtoggle">yes</string>
-                                                </action>
-                                            </normal>
-                                        </condition>
-                                    </else>
                                 </condition>
                             </else>
                             <or>
@@ -649,28 +966,6 @@
                                     <string id="value" values="flagtoggle">yes</string>
                                 </action>
                             </normal>
-                            <else>
-                                <condition id="isInArea">
-                                    <string id="condition" values="yesno">no</string>
-                                    <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;</string>
-                                    <string id="check green obstacles only" values="yesno">no</string>
-                                    <string id="count characters out of combat" values="yesno">yes</string>
-                                    <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
-                                    <string id="areaName"></string>
-                                    <float id="xOffset">0.25</float>
-                                    <float id="yOffset">0.50</float>
-                                    <float id="width">0.05</float>
-                                    <float id="height">0.10</float>
-                                    <string id="check line of sight" values="yesno">no</string>
-                                    <string id="ignore invisibility" values="yesno">no</string>
-                                    <normal>
-                                        <action id="setBool">
-                                            <string id="id">float</string>
-                                            <string id="value" values="flagtoggle">yes</string>
-                                        </action>
-                                    </normal>
-                                </condition>
-                            </else>
                         </condition>
                     </normal>
                     <or>
