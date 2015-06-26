@@ -33,99 +33,22 @@
 </condition>
 <condition id="isUpgradeEnabled">
 <string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinHammerDamage1</string>
+<string id="upgrade name">PaladinAuraDamageEnd1</string>
 <normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinHammerDamage1</string>
+<string id="upgrade name">PaladinAuraDamageEnd1</string>
 <normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinHammerDamage1</string>
+<string id="upgrade name">PaladinAuraDamageEnd1</string>
 </action></normal>
 </condition>
 </normal>
 </condition>
 <condition id="isUpgradeEnabled">
 <string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinHammerDamage2</string>
+<string id="upgrade name">PaladinAuraDamageEnd2</string>
 <normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinHammerDamage2</string>
+<string id="upgrade name">PaladinAuraDamageEnd2</string>
 <normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinHammerDamage2</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinHammerDamage3</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinHammerDamage3</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinHammerDamage3</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinSpeed</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinSpeed</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinSpeed</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinHammerCooldown1</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinHammerCooldown1</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinHammerCooldown1</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinHammerCooldown2</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinHammerCooldown2</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinHammerCooldown2</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">Healthregen1</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">Healthregen1</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">Healthregen1</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">Healthregen2</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">Healthregen2</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">Healthregen2</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">addHealth1</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">addHealth1</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">addHealth1</string>
+<string id="upgrade name">PaladinAuraDamageEnd2</string>
 </action></normal>
 </condition>
 </normal>
@@ -165,44 +88,11 @@
 </condition>
 <condition id="isUpgradeEnabled">
 <string id="condition" values="yesno">no</string>
-<string id="upgrade name">addHealth2</string>
+<string id="upgrade name">PaladinSpeed</string>
 <normal><condition id="canPayUpgrade">
-<string id="upgrade name">addHealth2</string>
+<string id="upgrade name">PaladinSpeed</string>
 <normal><action id="buyUpgrade">
-<string id="upgrade name">addHealth2</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">addHealth3</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">addHealth3</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">addHealth3</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinAuraDamageEnd1</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinAuraDamageEnd1</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinAuraDamageEnd1</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinAuraDamageEnd2</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinAuraDamageEnd2</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinAuraDamageEnd2</string>
+<string id="upgrade name">PaladinSpeed</string>
 </action></normal>
 </condition>
 </normal>
@@ -214,17 +104,6 @@
 <string id="upgrade name">PaladinAuraHot1</string>
 <normal><action id="buyUpgrade">
 <string id="upgrade name">PaladinAuraHot1</string>
-</action></normal>
-</condition>
-</normal>
-</condition>
-<condition id="isUpgradeEnabled">
-<string id="condition" values="yesno">no</string>
-<string id="upgrade name">PaladinAuraHot2</string>
-<normal><condition id="canPayUpgrade">
-<string id="upgrade name">PaladinAuraHot2</string>
-<normal><action id="buyUpgrade">
-<string id="upgrade name">PaladinAuraHot2</string>
 </action></normal>
 </condition>
 </normal>
@@ -264,6 +143,116 @@
 </condition>
 <condition id="isUpgradeEnabled">
 <string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinHammerDamage1</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinHammerDamage1</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinHammerDamage1</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinHammerDamage2</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinHammerDamage2</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinHammerDamage2</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinHammerCooldown1</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinHammerCooldown1</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinHammerCooldown1</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinHammerCooldown2</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinHammerCooldown2</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinHammerCooldown2</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinHammerDamage3</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinHammerDamage3</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinHammerDamage3</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">addHealth1</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">addHealth1</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">addHealth1</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">addHealth2</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">addHealth2</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">addHealth2</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">addHealth3</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">addHealth3</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">addHealth3</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">ccReduction</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">ccReduction</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">ccReduction</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">ccReduction2</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">ccReduction2</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">ccReduction2</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
 <string id="upgrade name">PaladinHitAttackspeed1</string>
 <normal><condition id="canPayUpgrade">
 <string id="upgrade name">PaladinHitAttackspeed1</string>
@@ -291,6 +280,17 @@
 <string id="upgrade name">PaladinHitAttackspeed3</string>
 <normal><action id="buyUpgrade">
 <string id="upgrade name">PaladinHitAttackspeed3</string>
+</action></normal>
+</condition>
+</normal>
+</condition>
+<condition id="isUpgradeEnabled">
+<string id="condition" values="yesno">no</string>
+<string id="upgrade name">PaladinAuraHot2</string>
+<normal><condition id="canPayUpgrade">
+<string id="upgrade name">PaladinAuraHot2</string>
+<normal><action id="buyUpgrade">
+<string id="upgrade name">PaladinAuraHot2</string>
 </action></normal>
 </condition>
 </normal>
