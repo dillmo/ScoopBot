@@ -11,6 +11,16 @@
                     <string id="fileName">VeankoAI</string>
                     <string id="Minimized">yes</string>
                 </action>
+                <condition id="once">
+                    <string id="Comment">Drop pod Solar</string>
+                    <normal>
+                        <action id="adjustCharacterValue">
+                            <string id="property" values="charactervaluesAdjustable">gold</string>
+                            <float id="value">40.00</float>
+                            <string id="adjust method" values="valueadjust">add</string>
+                        </action>
+                    </normal>
+                </condition>
                 <orblock>
                     <string id="Comment">Combat skills</string>
                     <string id="Minimized">yes</string>
